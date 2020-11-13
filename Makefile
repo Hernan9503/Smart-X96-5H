@@ -20,7 +20,7 @@ clean:
 	rm -f *.o ${SMARTX96}
 
 install: ${SMARTX96}
-	install -m 4711 $(SMARX96) /usr/local/bin
+	install -m 4711 $(SMARTX96) /usr/local/bin
 
 uninstall:
-	rm -f /usr/local/bin/$(SMARX96)
+	rm -f /usr/local/bin/$(SMARTX96)
