@@ -6,8 +6,8 @@ LDFLAGS = -O2 -Wall -g `pkg-config --libs libmodbus`
 
 #SDM = sdm120c
 SMARTX96 = SmartX96-5H
-%.o: %.py
-	$(CC) -py -o $@ $< $(CFLAGS)
+%.o: %.c
+	$(CC) -c -o $@ $< $(CFLAGS)
 
 ${SMARTX96}: SmartX96-5H.o
 	$(CC) -o $@ SmartX96-5H.o $(LDFLAGS)
