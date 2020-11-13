@@ -1,5 +1,4 @@
-# SDM120C
-SDM120C ModBus RTU client to read EASTRON SDM smart mini power meter registers
+# SmartX96-5H
 
 It depends on libmodbus (http://libmodbus.org)
 
@@ -13,10 +12,10 @@ To uninstall
   make uninstall
 
 <PRE>
-# SDM120C
-SDM120C ModBus RTU client to read EASTRON SDM120C smart mini power meter registers
+# SmartX96-5H
+SmartX96-5H ModBus RTU client to read EASTRON Smart-X96-5H smart power meter registers
 
-It works with SDM120C and SDM220 models
+It works with SmartX96-5H and SmartX96-5H-J models
 
 It depends on libmodbus (http://libmodbus.org)
 
@@ -24,10 +23,10 @@ To compile and install
   make clean && make install
 
 <PRE>
-Usage: sdm120c [-a address] [-d] [-x] [-p] [-v] [-c] [-e] [-i] [-t] [-f] [-g] [-T] [[-m]|[-q]] [-b baud_rate] [-P parity] [-S bit] [-z num_retries] [-j seconds] [-w seconds] [-1 | -2] device
-       sdm120c [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -s new_address device
-       sdm120c [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -r baud_rate device 
-       sdm120c [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -R new_time device
+Usage: SmartX96-5H [-a address] [-d] [-x] [-p] [-v] [-c] [-e] [-i] [-t] [-f] [-g] [-T] [[-m]|[-q]] [-b baud_rate] [-P parity] [-S bit] [-z num_retries] [-j seconds] [-w seconds] [-1 | -2] device
+       SmartX96-5H [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -s new_address device
+       SmartX96-5H [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -r baud_rate device 
+       SmartX96-5H [-a address] [-d] [-b baud_rate] [-P parity] [-S bit] [-1 | -2] -R new_time device
 
 where
     -a address     Meter number (between 1 and 247). Default: 1
