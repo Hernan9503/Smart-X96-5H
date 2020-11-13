@@ -6,18 +6,18 @@ LDFLAGS = -O2 -Wall -g `pkg-config --libs libmodbus`
 
 #SDM = sdm120c
 SMARTX96 = SmartX96-5H
-%.o: %.py
+%.py
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-${SMARTX96}: SmartX96-5H.o 
-	$(CC) -o $@ SmartX96-5H.o $(LDFLAGS)
+${SMARTX96}: SmartX96-5H.py
+	$(CC) -o $@ SmartX96-5H.py $(LDFLAGS)
 	chmod 4711 ${SMARTX96}
 
 strip:
 	strip ${SMARTX96}
 
 clean:
-	rm -f *.o ${SMARTX96}
+	rm -f *.py ${SMARTX96}
 
 install: ${SMARTX96}
 	install -m 4711 $(SMARTX96) /usr/local/bin
