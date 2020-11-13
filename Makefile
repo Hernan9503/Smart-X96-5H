@@ -9,7 +9,7 @@ SMARTX96 = SmartX96-5H
 %.o: %.py
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-${SDM}: SmartX96-5H.o 
+${SMARTX96}: SmartX96-5H.o 
 	$(CC) -o $@ SmartX96-5H.o $(LDFLAGS)
 	chmod 4711 ${SMARTX96}
 
