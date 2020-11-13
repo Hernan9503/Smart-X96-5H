@@ -4,22 +4,23 @@ CFLAGS  = -O2 -Wall -g `pkg-config --cflags libmodbus`
 #LDFLAGS = -O2 -Wall -g -L/usr/local/lib -lmodbus
 LDFLAGS = -O2 -Wall -g `pkg-config --libs libmodbus`
 
-SDM = sdm120c
-%.o: %.c
+#SDM = sdm120c
+SMARTX96 = SmartX96-5H
+%.o: %.py
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-${SDM}: sdm120c.o 
-	$(CC) -o $@ sdm120c.o $(LDFLAGS)
-	chmod 4711 ${SDM}
+${SDM}: SmartX96-5H.o 
+	$(CC) -o $@ SmartX96-5H.o $(LDFLAGS)
+	chmod 4711 ${SMARTX96}
 
 strip:
-	strip ${SDM}
+	strip ${SMARTX96}
 
 clean:
-	rm -f *.o ${SDM}
+	rm -f *.o ${SMARTX96}
 
-install: ${SDM}
-	install -m 4711 $(SDM) /usr/local/bin
+install: ${SMARTX96}
+	install -m 4711 $(SMARX96) /usr/local/bin
 
 uninstall:
-	rm -f /usr/local/bin/$(SDM)
+	rm -f /usr/local/bin/$(SMARX96)
